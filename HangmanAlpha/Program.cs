@@ -109,9 +109,13 @@ namespace HangmanAlpha
 			{
 				Console.Clear();
 				Console.WriteLine("Choose level");
-				Console.WriteLine("1: Easy");
-				Console.WriteLine("2: Normal");
-				Console.WriteLine("3: Hard");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("1: Easy");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("2: Normal");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("3: Hard");
+                Console.ResetColor();
 
 				string input = Console.ReadLine();
 				levelChosen = int.Parse(input);

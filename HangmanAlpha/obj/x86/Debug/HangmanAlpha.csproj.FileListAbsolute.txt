@@ -1,0 +1,5 @@
+C:\Users\Alexander Holmberg\Source\Repos\HangmanAlpha\HangmanAlpha\bin\Debug\HangmanAlpha.exe
+C:\Users\Alexander Holmberg\Source\Repos\HangmanAlpha\HangmanAlpha\bin\Debug\HangmanAlpha.pdb
+C:\Users\Alexander Holmberg\Source\Repos\HangmanAlpha\HangmanAlpha\obj\x86\Debug\HangmanAlpha.csprojResolveAssemblyReference.cache
+C:\Users\Alexander Holmberg\Source\Repos\HangmanAlpha\HangmanAlpha\obj\x86\Debug\HangmanAlpha.exe
+C:\Users\Alexander Holmberg\Source\Repos\HangmanAlpha\HangmanAlpha\obj\x86\Debug\HangmanAlpha.pdb
