@@ -7,13 +7,10 @@ using System.Threading.Tasks;
 namespace HangmanAlpha
 {
 	class Program
-	{
-		//
+    { 
 		static string playerName;
 		static int lives = 7;
-		//static string attempts;
 		static string secretWord;
-		// static string guessedLetter;
 		static int levelChosen;
 		static string[] maskedWord;
 		static bool isTryAgain = true;
@@ -31,19 +28,12 @@ namespace HangmanAlpha
 				MenuStart();
 				Difficulty();
 				WordGenerator();
-				//CountLetters();
 				GuessedLetter();
 				TryAgain();
 
 			}
 			Quit();                          //HÄR SLUTAR SPEL-LOOPEN
-											 //ShowLetter();
-											 //IncorrectLetter();
-											 // ShowWrong();
-
-			//GameLost();
-			//TryAgain();
-			//GameEngine();
+											 
 		}
 		static void Welcome()
 		{
@@ -99,7 +89,6 @@ namespace HangmanAlpha
 
 
 		}
-
 		static int Difficulty()
 		{
 			bool levelChosenLoop = true;
@@ -133,9 +122,6 @@ namespace HangmanAlpha
 			}                                                  ///HÄR SLUTAR LOOPEN FÖR CHOSEN LEVEL
 			return levelChosen;
 		}
-
-
-
 		static void WordGenerator()                           ///HÄR SKAPAS OLIKA ORD PER SVÅRHETSGRAD
 		{
 			// ska slumpa ett ord från en ordbank, 
@@ -167,14 +153,11 @@ namespace HangmanAlpha
 			}
 			Console.Clear();
 		}
-
-
 		static void Lives(bool letterCorrect)
 		{
 			// hanterar liven, utvecklas med if senare
 			Console.WriteLine(letterCorrect);
 		}
-
 		static void GuessedLetter()
 		{
 			maskedWord = new string[secretWord.Length];
@@ -241,28 +224,9 @@ namespace HangmanAlpha
 					}
 				}
 			}
-
-
-			/*
-            Console.WriteLine("\nGuess a letter!"); //Kommer bytas ut mot en bokstav senare
-            guessedLetter = Console.ReadLine();
-            if (guessedLetter.ToLower() == secretWord)
-            {
-                GameWon();
-            }
-            else
-            {
-                IncorrectLetter();
-            }
-            */
-			//Lives(true);
+            
 		}
-		static void ShowUsedLetter()
-		{
-			//Visar bokstäver som använts
-			// Console.WriteLine(guessedLetter);
-			Console.ReadLine();
-		}
+		
 		static bool LetterController(string guessedLetter, string secretWord)
 		{
 			int counter = 0;
@@ -284,11 +248,7 @@ namespace HangmanAlpha
 			}
 
 		}
-		static void ShowWrong()
-		{
-			// ska visa vilka bokstäver som är fel
-		}
-
+		
 		static void GameLost()
 		{
 			// Visar ett meddelande om förlust
@@ -309,8 +269,6 @@ namespace HangmanAlpha
 		}
 		static void TryAgain()
 		{
-
-
 			// Frågar om spelaren vill spela igen
 			Console.WriteLine("Try again? (Y/N)");
 			string inputTry = Console.ReadLine();
@@ -336,7 +294,6 @@ namespace HangmanAlpha
 
 			// anropa quit eller meny
 		}
-
 		static void HowTo()
 		{
 			Console.Clear();
