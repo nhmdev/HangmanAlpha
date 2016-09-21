@@ -32,9 +32,9 @@ namespace HangmanAlpha
                     case 3: Quit(); break;
                     default: break;
                 }
-                TryAgain();
+                
 			}
-			Quit();                          //HÄR SLUTAR SPEL-LOOPEN
+			                      //HÄR SLUTAR SPEL-LOOPEN
 											 
 		}
 		static void Welcome()
@@ -70,7 +70,8 @@ namespace HangmanAlpha
 		}
 		static void TryAgain()
 		{
-			// Frågar om spelaren vill spela igen
+            // Frågar om spelaren vill spela igen
+            Console.Clear();
 			Console.WriteLine("Try again? (Y/N)");
 			string inputTry = Console.ReadLine();
 
@@ -105,7 +106,6 @@ namespace HangmanAlpha
 			Console.WriteLine("When the wrong letter is chosen you lose a life.");
 			Console.WriteLine("When your lives reach 0 or the word is completed the game will end.");
 			Console.ReadLine();
-			MenuStart();
 		}
         static void StartGame()
         {
@@ -113,6 +113,7 @@ namespace HangmanAlpha
             newGame.Difficulty();
             newGame.WordGenerator();
             newGame.GuessedLetter();
+            TryAgain();
             
         }
         
