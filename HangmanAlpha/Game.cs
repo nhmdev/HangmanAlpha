@@ -8,7 +8,7 @@ namespace HangmanAlpha
 {
     class Game
     {
-        int lives = 7;
+        int lives;
         int levelChosen;
         string secretWord;
         string[] maskedWord;
@@ -64,11 +64,7 @@ namespace HangmanAlpha
             {
                 maskedWord[i] = "_ ";
                 Console.Write(maskedWord[i]);
-
-
-            }
-            // maskedWord = "_ _ _ _ _" if secretWord = 5
-
+            } 
             bool isGameRunning = false;
             int lettersRevealed = 0;
             while (!isGameRunning)
@@ -94,6 +90,7 @@ namespace HangmanAlpha
                         }
                         else
                         {
+                            isGameRunning = true;
                             GameLost();
                         }
 
@@ -113,11 +110,12 @@ namespace HangmanAlpha
 
                         Console.Write(maskedWord[i]);
                     }
-                    Console.Write("\nGuess a letter: ");
                     if (lettersRevealed == secretWord.Length)
                     {
                         isGameRunning = true;
+                        GameWon();
                     }
+
                 }
             }
 
@@ -134,18 +132,51 @@ namespace HangmanAlpha
 			// ska slumpa ett ord från en ordbank, 
 			//utvecklas senare med array när vi har fler ord
 
-			string[] easyWords = new string[3];
-			easyWords[1] = "waterboy";
+			string[] easyWords = new string[5];
+            
+			easyWords[0] = "waterboy";
+            easyWords[1] = "carpenter";
+            easyWords[2] = "chauffeur";
+            easyWords[3] = "bananaphone";
+            easyWords[4] = "battlefield";
 
-			string[] normalWords = new string[3];
-			normalWords[1] = "flower";
+            string[] normalWords = new string[5];
+            
+			normalWords[0] = "hippo";
+            normalWords[1] = "santa";
+            normalWords[2] = "rudolph";
+            normalWords[3] = "dolphin";
+            normalWords[4] = "stomach";
 
-			string[] hardWords = new string[3];
-			hardWords[1] = "jazz";
+            string[] hardWords = new string[5];
+            
+			hardWords[0] = "jazz";
+            hardWords[1] = "bikini";
+            hardWords[2] = "ivy";
+            hardWords[3] = "oxygen";
+            hardWords[4] = "yacht";
+        
+            switch (levelChosen)
+            {
+                case 1:
+                    lives = 8;
+                    Random easyWord = new Random();
+                    int randomNumberEasy = easyWord.Next(0, 4);
+                    secretWord = easyWords[randomNumberEasy]; break;
+                case 2:
+                    lives = 6;
+                    Random normalWord = new Random();
+                    int randomNumberNormal = normalWord.Next(0, 4);
+                    secretWord = normalWords[randomNumberNormal]; break;
+                case 3:
+                    lives = 4;
+                    Random hardWord = new Random();
+                    int randomNumberHard = hardWord.Next(0, 4);
+                    secretWord = hardWords[randomNumberHard]; break;
+            }
 
-
-
-			if (levelChosen == 1)
+            /*
+            if (levelChosen == 1)
 			{
 				secretWord = easyWords[1];
 			}
@@ -159,6 +190,7 @@ namespace HangmanAlpha
 				secretWord = hardWords[1];
 			}
 			Console.Clear();
+            */
 		}
         public void Difficulty()
         {
