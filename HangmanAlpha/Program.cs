@@ -39,10 +39,122 @@ namespace HangmanAlpha
 		}
 		static void Welcome()
 		{
-			Console.WriteLine("Welcome to the award winning Hangman Game made by the Alpha Team\n");
-
-
-		}
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                string enterName1 = "     " + "___________________________  ________ \n";
+                foreach (char writeChar in enterName1)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                string enterName2 = "     " + "___    | __ / ___  __ \\__ / / /__    |\n";
+                foreach (char writeChar in enterName2)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                string enterName3 = "     " + "__  /| |_  / __  /_/ /_  /_/ /__  /| |\n";
+                foreach (char writeChar in enterName3)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                string enterName4 = "     " + "_  ___ |  /___  ____/_  __  / _  ___ |\n";
+                foreach (char writeChar in enterName4)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                string enterName5 = "     " + "/_/  |_/_____/_/     /_/ /_/  /_/  |_|\n";
+                foreach (char writeChar in enterName5)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                string enterName6 = "     " + "____________________________________  ___________________________________   _________\n";
+                foreach (char writeChar in enterName6)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                string enterName7 = "     " + "___  __ \\__  __ \\_  __ \\__  __ \\_  / / /_  ____/__  __/___  _/_  __ \\__  | / /_  ___/\n";
+                foreach (char writeChar in enterName7)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                string enterName8 = "     " + "__  /_/ /_  /_/ /  / / /_  / / /  / / /_  /    __  /   __  / _  / / /_   |/ /_____ \\ \n";
+                foreach (char writeChar in enterName8)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                string enterName9 = "     " + "_  ____/_  _, _// /_/ /_  /_/ // /_/ / / /___  _  /   __/ /  / /_/ /_  /|  / ____/ / \n";
+                foreach (char writeChar in enterName9)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                string enterName10 = "     " + "/_/     /_/ |_| \\____/ /_____/ \\____/  \\____/  /_/    /___/  \\____/ /_/ |_/  /____/  \n";
+                foreach (char writeChar in enterName10)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                string enterName11 = "     " + "______________________________________________   ________________\n";
+                foreach (char writeChar in enterName11)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                string enterName12 = "     " + "___  __ \\__  __ \\__  ____/_  ___/__  ____/__  | / /__  __/_  ___/\n";
+                foreach (char writeChar in enterName12)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                string enterName13 = "     " + "__  /_/ /_  /_/ /_  __/  _____ \\__  __/  __   |/ /__  /  _____ \\ \n";
+                foreach (char writeChar in enterName13)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                string enterName14 = "     " + "_  ____/_  _, _/_  /___  ____/ /_  /___  _  /|  / _  /   ____/ / \n";
+                foreach (char writeChar in enterName14)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                string enterName15 = "     " + "/_/     /_/ |_| /_____/  /____/ /_____/  /_/ |_/  /_/    /____/  \n";
+                foreach (char writeChar in enterName15)
+                {
+                    Console.Write(writeChar);
+                    System.Threading.Thread.Sleep(5);
+                }
+                Console.ReadLine();
+                Console.ResetColor();
+            }
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.WriteLine("\n\nooooooooooooo ooooo   ooooo oooooooooooo      oooooo   oooooo     oooo oooooooooooo ooooo        ooooo        ");
+            Console.WriteLine("8'   888   `8 `888'   `888' `888'     `8       `888.    `888.     .8'  `888'     `8 `888'        `888'        ");
+            Console.WriteLine("     888       888     888   888                `888.   .8888.   .8'    888          888          888         ");
+            Console.WriteLine("     888       888ooooo888   888oooo8            `888  .8'`888. .8'     888oooo8     888          888         ");
+            Console.WriteLine("     888       888     888   888                  `888.8'  `888.8'      888          888          888         ");
+            Console.WriteLine("     888       888     888   888       o           `888'    `888'       888       o  888       o  888       o ");
+            Console.WriteLine("    o888o     o888o   o888o o888ooooood8            `8'      `8'       o888ooooood8 o888ooooood8 o888ooooood8 ");
+            Console.WriteLine("\n\nooooo   ooooo ooooo     ooo ooooo      ooo   .oooooo.         ooo        ooooo       .o.       ooooo      ooo ");
+            Console.WriteLine("`888'   `888' `888'     `8' `888b.     `8'  d8P'  `Y8b        `88.       .888'      .888.      `888b.     `8' ");
+            Console.WriteLine(" 888     888   888       8   8 `88b.    8  888                 888b     d'888      .88888.      8 `88b.    8  ");
+            Console.WriteLine(" 888ooooo888   888       8   8   `88b.  8  888                 8 Y88. .P  888     .8' `888.     8   `88b.  8  ");
+            Console.WriteLine(" 888     888   888       8   8     `88b.8  888     ooooo       8  `888'   888    .88ooo8888.    8     `88b.8  ");
+            Console.WriteLine(" 888     888   `88.    .8'   8       `888  `88.    .88'        8    Y     888   .8'     `888.   8       `888  ");
+            Console.WriteLine("o888o   o888o    `YbodP'    o8o        `8   `Y8bood8P'        o8o        o888o o88o     o8888o o8o        `8  ");
+            Console.ResetColor();
+            Console.ReadLine();
+        }
 		static int MenuStart()
 		{
 			// Låter spelaren välja mellan 1 och 2

@@ -17,7 +17,16 @@ namespace HangmanAlpha
         {
             // Visar ett meddelande om förlust
             Console.Clear();
-            Console.WriteLine("You lost the game.. ");
+            Console.WriteLine("     ------------- ");
+            Console.WriteLine("     |           | ");
+            Console.WriteLine("     O           | ");
+            Console.WriteLine("    /|\\          | ");
+            Console.WriteLine("    / \\          | ");
+            Console.WriteLine("                 | ");
+            Console.WriteLine("              ------- ");
+            Console.WriteLine("             /       \\ ");
+            Console.WriteLine("            /         \\ ");
+            Console.WriteLine("\nYou lost the game.. ");
             Console.WriteLine("You are useless, you are a shame to the human kind " + "!");
             Console.ReadLine();
 
@@ -26,7 +35,16 @@ namespace HangmanAlpha
         {
             // Visar ett meddelande om vinst
             Console.Clear();
-            Console.WriteLine("Good job " + "!");
+            Console.WriteLine("     ------------- ");
+            Console.WriteLine("     |           | ");
+            Console.WriteLine("     |           | ");
+            Console.WriteLine("     O           | ");
+            Console.WriteLine("                 | ");
+            Console.WriteLine("                 | ");
+            Console.WriteLine("  \\ O /       ------- ");
+            Console.WriteLine("    |        /       \\ ");
+            Console.WriteLine("   / \\      /         \\ ");
+            Console.WriteLine("\nGood job " + "!");
             Console.WriteLine("The word is " + secretWord);
             Console.ReadLine();
 
