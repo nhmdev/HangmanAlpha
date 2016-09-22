@@ -192,23 +192,6 @@ namespace HangmanAlpha
                     int randomNumberHard = hardWord.Next(0, 4);
                     secretWord = hardWords[randomNumberHard]; break;
             }
-
-            /*
-            if (levelChosen == 1)
-			{
-				secretWord = easyWords[1];
-			}
-			else if (levelChosen == 2)
-			{
-				secretWord = normalWords[1];
-			}
-
-			else if (levelChosen == 3)
-			{
-				secretWord = hardWords[1];
-			}
-			Console.Clear();
-            */
 		}
         public void Difficulty()
         {
