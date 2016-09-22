@@ -15,7 +15,7 @@ namespace HangmanAlpha
             //kontrolleras att det är minst 3 bokstäver långt
 
 
-            Console.Write("Enter your name: ");                     //MIN TRE BOKSTÄVER I Namnet
+            Console.Write("Enter thy name, mortal!: ");                     //MIN TRE BOKSTÄVER I Namnet
             playerName = Console.ReadLine();
             while (playerName.Length < 3)
             {

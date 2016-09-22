@@ -159,10 +159,42 @@ namespace HangmanAlpha
 		{
 			// Låter spelaren välja mellan 1 och 2
 			Console.Clear();
-			Console.WriteLine("\n1: Start");
-			Console.WriteLine("2: How To");
-			Console.WriteLine("3: Quit");
-			string input = Console.ReadLine();
+            Console.WriteLine("………………..$…………………………………………………………….$……………");
+            Console.WriteLine("……………….$$…………………………………………………………….$$…………");
+            Console.WriteLine("……………….$$…………………………………………………………….$$…………");
+            Console.WriteLine("………………..$$s………………………………………………….s$$……………");
+            Console.WriteLine("………………….$$$$..……………………………………….$$$$……………");
+            Console.WriteLine("…………………….³$.$$$..¶¶¶¶¶¶¶¶..$$$$³.………………");
+            Console.WriteLine("……………………...³$$$$..¶¶¶¶¶¶..$$$$³...……………");
+            Console.WriteLine("………………………¶..$$$$$..¶¶¶¶..$$$$$..¶………………");
+            Console.WriteLine("……………………….¶¶.$$$..¶¶¶¶¶¶..$$$..¶¶.……………");
+            Console.WriteLine("………………………….¶¶¶….¶¶¶¶¶¶¶¶¶¶….¶¶¶¶.………………");
+            Console.WriteLine("………………………….¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶.………………");
+            Console.WriteLine("……………………………..¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶.…………………");
+            Console.WriteLine("………………………………….¶¶……..¶¶¶¶……….¶¶.……………………");
+            Console.WriteLine("………………………………….¶¶……..¶¶¶¶……….¶¶.……………………");
+            Console.WriteLine("……………………………….¶¶¶¶¶¶¶¶..¶¶¶¶¶¶¶¶.…………………");
+            Console.WriteLine("…………………………………..¶¶¶¶¶¶……¶¶¶¶¶¶¶.……………………");
+            Console.WriteLine("………………………………………..¶¶¶¶¶¶¶¶¶¶.……………………………");
+            Console.WriteLine("…………………………………………….¶.¶..¶.¶.………………………………");
+            Console.WriteLine("…………………………………………….¶…………….¶.………………………………");
+            Console.WriteLine("     ______________________________");
+            Console.WriteLine("    |                              |");
+            Console.WriteLine("    |         1: Start             |");
+            Console.WriteLine("    |         2: How To            |");
+            Console.WriteLine("    |         3: Quit              |");
+            Console.WriteLine("    |______________________________|");
+            Console.WriteLine("……………¶………………………………………………………………………………¶…………");
+            Console.WriteLine("………….¶¶……………………………………………………………………….¶¶…………");
+            Console.WriteLine("………….¶¶……………………………………………………………………….¶¶…………");
+            Console.WriteLine("………….¶¶…………………..¶¶…………….¶¶…………………..¶¶…………");
+            Console.WriteLine("………….¶¶..¶¶..¶¶..¶…………..¶..¶¶..¶¶..¶¶…………");
+            Console.WriteLine("……¶..¶¶..¶¶..¶¶..¶…………..¶..¶¶..¶¶..¶¶..¶……..");
+            Console.WriteLine(".¶¶..¶¶..¶¶..¶¶..¶…………..¶..¶¶..¶¶..¶¶..¶¶……");
+            Console.WriteLine("………¶¶¶¶..¶¶..¶¶…………………………….¶¶..¶¶..¶¶¶¶……..");
+
+
+            string input = Console.ReadLine();
 			int inputInt = int.Parse(input);
 			while (inputInt > 3 || inputInt < 1)
 
