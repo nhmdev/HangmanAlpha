@@ -8,25 +8,24 @@ namespace HangmanAlpha
 {
     class Player
     {
-        string playerName;
+        private string playerName;
 
         public string PlayerName
         {
             
-           get
-            {
-                return playerName;
-            }
+           get { return playerName;}
            set
             {
 
                 if (value.Length > 2)
                     playerName = value;
-                //isPlayerName = true;           
-                else
+                         
+                else if (value.Length < 3)
                 {
-                    playerName =  "";                            
+                    playerName = "";
+                    Console.WriteLine("Your name must contain at least 3 characters..");                     
                 }
+
                         
                 
 

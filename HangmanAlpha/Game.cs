@@ -8,12 +8,11 @@ namespace HangmanAlpha
 {
     class Game
     {
-        int lives;
-        int levelChosen;
-        string secretWord;
-        string[] maskedWord;
-       
-
+        private int lives;
+        private int levelChosen;
+        private string secretWord;
+        private string[] maskedWord;
+    
         void GameLost()
         {
             // Visar ett meddelande om förlust
@@ -223,7 +222,9 @@ namespace HangmanAlpha
                         // default: break;
 
                 }
-
+                {
+                    
+                }
             }                                                  ///HÄR SLUTAR LOOPEN FÖR CHOSEN LEVEL
 
         }

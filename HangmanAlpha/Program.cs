@@ -9,7 +9,7 @@ namespace HangmanAlpha
 	class Program
     { 
 
-		static bool isTryAgain = true;
+		private static bool isTryAgain = true;
         
 
 
@@ -161,8 +161,7 @@ namespace HangmanAlpha
                 Console.WriteLine(player1.PlayerName);
             }
             while (player1.PlayerName.Length < 3);
-               
-                
+            
                     
             
         }

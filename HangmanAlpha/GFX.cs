@@ -8,5 +8,7 @@ namespace HangmanAlpha
 {
     class GFX
     {
+
     }
+
 }
