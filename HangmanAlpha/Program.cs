@@ -40,7 +40,7 @@ namespace HangmanAlpha
 		static void Welcome()
 		{
             {
-                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.ForegroundColor = ConsoleColor.Red;
                 string enterName1 = "     " + "___________________________  ________ \n";
                 foreach (char writeChar in enterName1)
                 {
@@ -71,7 +71,7 @@ namespace HangmanAlpha
                     Console.Write(writeChar);
                     System.Threading.Thread.Sleep(5);
                 }
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.ForegroundColor = ConsoleColor.Green;
                 string enterName6 = "     " + "____________________________________  ___________________________________   _________\n";
                 foreach (char writeChar in enterName6)
                 {
@@ -102,7 +102,7 @@ namespace HangmanAlpha
                     Console.Write(writeChar);
                     System.Threading.Thread.Sleep(5);
                 }
-                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.ForegroundColor = ConsoleColor.Red;
                 string enterName11 = "     " + "______________________________________________   ________________\n";
                 foreach (char writeChar in enterName11)
                 {
@@ -137,7 +137,7 @@ namespace HangmanAlpha
                 Console.ResetColor();
             }
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\n\nooooooooooooo ooooo   ooooo oooooooooooo      oooooo   oooooo     oooo oooooooooooo ooooo        ooooo        ");
             Console.WriteLine("8'   888   `8 `888'   `888' `888'     `8       `888.    `888.     .8'  `888'     `8 `888'        `888'        ");
             Console.WriteLine("     888       888     888   888                `888.   .8888.   .8'    888          888          888         ");
