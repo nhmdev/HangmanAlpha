@@ -8,19 +8,16 @@ namespace HangmanAlpha
 {
 	class Program
     { 
-		//static int lives = 7;
-		//static string secretWord;
-		//static int levelChosen;
-		//static string[] maskedWord;
+
 		static bool isTryAgain = true;
+        
 
 
 
 		static void Main(string[] args)
 		{
 			Welcome();
-            Player player1 = new Player();
-            player1.PlayerName();
+            
 
 			while (isTryAgain)                    ///HÄR STARTAR SPEL-LOOPEN
 			{
@@ -154,6 +151,20 @@ namespace HangmanAlpha
             Console.WriteLine("o888o   o888o    `YbodP'    o8o        `8   `Y8bood8P'        o8o        o888o o88o     o8888o o8o        `8  ");
             Console.ResetColor();
             Console.ReadLine();
+
+            Player player1 = new Player();
+            do
+            {
+                Console.WriteLine("Enter your name: ");
+                player1.PlayerName = Console.ReadLine();
+
+                Console.WriteLine(player1.PlayerName);
+            }
+            while (player1.PlayerName.Length < 3);
+               
+                
+                    
+            
         }
 		static int MenuStart()
 		{

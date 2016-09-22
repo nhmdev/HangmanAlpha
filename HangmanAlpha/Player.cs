@@ -8,22 +8,29 @@ namespace HangmanAlpha
 {
     class Player
     {
-        public string playerName;
-        public void PlayerName()
+        string playerName;
+
+        public string PlayerName
         {
-            // Spelaren skriver in sitt namn och det 
-            //kontrolleras att det är minst 3 bokstäver långt
-
-
-            Console.Write("Enter thy name, mortal!: ");                     //MIN TRE BOKSTÄVER I Namnet
-            playerName = Console.ReadLine();
-            while (playerName.Length < 3)
+            
+           get
             {
-                Console.WriteLine("invalid name, min 3 characters");
-                playerName = Console.ReadLine();
+                return playerName;
             }
+           set
+            {
 
+                if (value.Length > 2)
+                    playerName = value;
+                //isPlayerName = true;           
+                else
+                {
+                    playerName =  "";                            
+                }
+                        
+                
 
+            }
         }
     }
 }

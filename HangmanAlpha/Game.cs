@@ -12,6 +12,7 @@ namespace HangmanAlpha
         int levelChosen;
         string secretWord;
         string[] maskedWord;
+       
 
         void GameLost()
         {
@@ -26,7 +27,7 @@ namespace HangmanAlpha
             Console.WriteLine("              ------- ");
             Console.WriteLine("             /       \\ ");
             Console.WriteLine("            /         \\ ");
-            Console.WriteLine("\nYou lost the game.. ");
+            Console.WriteLine("\nYou lost the game.. " );
             Console.WriteLine("You are useless, you are a shame to the human kind " + "!");
             Console.ReadLine();
 
