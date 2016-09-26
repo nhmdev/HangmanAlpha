@@ -41,6 +41,7 @@
   <ItemGroup>
     <Content Include="Textfiles\Playernames.txt" />
     <Content Include="Textfiles\WelcomeGFX.txt" />
+    <Content Include="Textfiles\Words\Words.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

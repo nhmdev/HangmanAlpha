@@ -35,7 +35,7 @@ namespace HangmanAlpha
 			                      //HÄR SLUTAR SPEL-LOOPEN
 											 
 		}
-		static void Welcome()
+		public static string Welcome()
 		{
             {/*
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -163,13 +163,13 @@ namespace HangmanAlpha
                     Console.WriteLine("Name must contain atleast 3 letters.");
             }
             while (player1.PlayerName.Length < 3);
-
+            
             string fileContent = player1.PlayerName + Environment.NewLine;
             
-            File.WriteAllText(@"C:\Users\ander\Documents\GitHub\AlfaHangman\HangmanAlpha6\HangmanAlpha\Textfiles", fileContent);
-            
-                    
-            
+            File.WriteAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha3\HangmanAlpha\Textfiles\Playernames.txt", fileContent);
+            return player1.PlayerName;
+
+
         }
 		static int MenuStart()
 		{
@@ -267,6 +267,11 @@ namespace HangmanAlpha
 			Console.WriteLine("When your lives reach 0 or the word is completed the game will end.");
 			Console.ReadLine();
 		}
+        static void HighScore()
+        {
+
+        }
+
         static void StartGame()
         {
             Game newGame = new Game();

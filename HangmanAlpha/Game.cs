@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,12 @@ namespace HangmanAlpha
 {
     class Game
     {
-        private int lives;
+        public int lives;
         private int levelChosen;
         private string secretWord;
         private string[] maskedWord;
+        int score;
+        
     
         void GameLost()
         {
@@ -26,7 +29,7 @@ namespace HangmanAlpha
             Console.WriteLine("              ------- ");
             Console.WriteLine("             /       \\ ");
             Console.WriteLine("            /         \\ ");
-            Console.WriteLine("\nYou lost the game.. " );
+            Console.WriteLine("\nYou lost the game.. ");
             Console.WriteLine("The word was " + secretWord);
             Console.WriteLine("You are useless, you are a shame to the human kind " + "!");
             Console.ReadLine();
@@ -47,8 +50,13 @@ namespace HangmanAlpha
             Console.WriteLine("   / \\      /         \\ ");
             Console.WriteLine("\nGood job " + "!");
             Console.WriteLine("The word is " + secretWord);
+            Score();
             Console.ReadLine();
 
+        }
+        string[] GetPlayerNameFromFile()
+        {
+          return  File.ReadAllLines(@"C:\Users\Anders\Source\Repos\HangmanAlpha3\HangmanAlpha\Textfiles\Playernames.txt");
         }
 
         bool LetterController(string guessedLetter, string secretWord)
@@ -105,6 +113,7 @@ namespace HangmanAlpha
                         {
                             Console.WriteLine("Incorrect letter");
                             lives--;
+                            score = score - 10;
                             Console.WriteLine("You have " + lives + " lives left");
                         }
                         else
@@ -148,52 +157,39 @@ namespace HangmanAlpha
 
         public void WordGenerator()                           ///HÄR SKAPAS OLIKA ORD PER SVÅRHETSGRAD
 		{
-			// ska slumpa ett ord från en ordbank, 
-			//utvecklas senare med array när vi har fler ord
+            // ska slumpa ett ord från en ordbank, 
+            //utvecklas senare med array när vi har fler ord
+            var words = File.ReadAllLines(@"C:\Users\Anders\Source\Repos\HangmanAlpha3\HangmanAlpha\Textfiles\Words\Words.txt");
 
-			string[] easyWords = new string[5];
-            
-			easyWords[0] = "waterboy";
-            easyWords[1] = "carpenter";
-            easyWords[2] = "chauffeur";
-            easyWords[3] = "bananaphone";
-            easyWords[4] = "battlefield";
 
-            string[] normalWords = new string[5];
-            
-			normalWords[0] = "hippo";
-            normalWords[1] = "santa";
-            normalWords[2] = "rudolph";
-            normalWords[3] = "dolphin";
-            normalWords[4] = "stomach";
 
-            string[] hardWords = new string[5];
-            
-			hardWords[0] = "jazz";
-            hardWords[1] = "bikini";
-            hardWords[2] = "ivy";
-            hardWords[3] = "oxygen";
-            hardWords[4] = "yacht";
-        
             switch (levelChosen)
             {
                 case 1:
-                    lives = 8;
+                    lives = 10;
+                    score = 100;
                     Random easyWord = new Random();
-                    int randomNumberEasy = easyWord.Next(0, 4);
-                    secretWord = easyWords[randomNumberEasy]; break;
+                    int randomNumberEasy = easyWord.Next(1, 10);
+                    secretWord = words[randomNumberEasy]; break;
                 case 2:
-                    lives = 6;
+                    lives = 10;
+                    score = 200;
                     Random normalWord = new Random();
-                    int randomNumberNormal = normalWord.Next(0, 4);
-                    secretWord = normalWords[randomNumberNormal]; break;
+                    int randomNumberNormal = normalWord.Next(12, 21);
+                    secretWord = words[randomNumberNormal]; break;
                 case 3:
-                    lives = 4;
+                    lives = 10;
+                    score = 300;
                     Random hardWord = new Random();
-                    int randomNumberHard = hardWord.Next(0, 4);
-                    secretWord = hardWords[randomNumberHard]; break;
+                    int randomNumberHard = hardWord.Next(23, 32);
+                    secretWord = words[randomNumberHard]; break;
             }
+
 		}
+        void Score()
+        {
+            Console.WriteLine("Your last score was: " + score);
+        }
         public void Difficulty()
         {
             bool levelChosenLoop = true;
@@ -223,11 +219,11 @@ namespace HangmanAlpha
                         // default: break;
 
                 }
-                {
-                    
-                }
+                
+               
             }                                                  ///HÄR SLUTAR LOOPEN FÖR CHOSEN LEVEL
 
         }
+
     }
 }
