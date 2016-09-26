@@ -27,6 +27,7 @@ namespace HangmanAlpha
             Console.WriteLine("             /       \\ ");
             Console.WriteLine("            /         \\ ");
             Console.WriteLine("\nYou lost the game.. " );
+            Console.WriteLine("The word was " + secretWord);
             Console.WriteLine("You are useless, you are a shame to the human kind " + "!");
             Console.ReadLine();
 

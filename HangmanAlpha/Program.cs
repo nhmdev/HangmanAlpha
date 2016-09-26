@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,7 +37,7 @@ namespace HangmanAlpha
 		}
 		static void Welcome()
 		{
-            {
+            {/*
                 Console.ForegroundColor = ConsoleColor.Red;
                 string enterName1 = "     " + "___________________________  ________ \n";
                 foreach (char writeChar in enterName1)
@@ -131,7 +132,7 @@ namespace HangmanAlpha
                     System.Threading.Thread.Sleep(5);
                 }
                 Console.ReadLine();
-                Console.ResetColor();
+                Console.ResetColor();*/
             }
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
@@ -153,14 +154,19 @@ namespace HangmanAlpha
             Console.ReadLine();
 
             Player player1 = new Player();
+            Console.WriteLine("Enter thy name mortal! ");
             do
             {
-                Console.WriteLine("Enter your name: ");
+                
                 player1.PlayerName = Console.ReadLine();
-
-                Console.WriteLine(player1.PlayerName);
+                if(player1.PlayerName.Length < 3)
+                    Console.WriteLine("Name must contain atleast 3 letters.");
             }
             while (player1.PlayerName.Length < 3);
+
+            string fileContent = player1.PlayerName + Environment.NewLine;
+            
+            File.WriteAllText(@"C:\Users\ander\Documents\GitHub\AlfaHangman\HangmanAlpha6\HangmanAlpha\Textfiles", fileContent);
             
                     
             

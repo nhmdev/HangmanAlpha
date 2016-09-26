@@ -38,3 +38,8 @@ C:\Users\ander\Documents\GitHub\AlfaHangman\HangmanAlpha5\HangmanAlpha\obj\x86\D
 C:\Users\ander\Documents\GitHub\AlfaHangman\HangmanAlpha5\HangmanAlpha\bin\Debug\HangmanAlpha.exe
 C:\Users\ander\Documents\GitHub\AlfaHangman\HangmanAlpha5\HangmanAlpha\bin\Debug\HangmanAlpha.pdb
 C:\Users\ander\Documents\GitHub\AlfaHangman\HangmanAlpha5\HangmanAlpha\obj\x86\Debug\HangmanAlpha.csprojResolveAssemblyReference.cache
+C:\Users\ander\Documents\GitHub\AlfaHangman\HangmanAlpha6\HangmanAlpha\obj\x86\Debug\HangmanAlpha.exe
+C:\Users\ander\Documents\GitHub\AlfaHangman\HangmanAlpha6\HangmanAlpha\obj\x86\Debug\HangmanAlpha.pdb
+C:\Users\ander\Documents\GitHub\AlfaHangman\HangmanAlpha6\HangmanAlpha\bin\Debug\HangmanAlpha.exe
+C:\Users\ander\Documents\GitHub\AlfaHangman\HangmanAlpha6\HangmanAlpha\bin\Debug\HangmanAlpha.pdb
+C:\Users\ander\Documents\GitHub\AlfaHangman\HangmanAlpha6\HangmanAlpha\obj\x86\Debug\HangmanAlpha.csprojResolveAssemblyReference.cache
