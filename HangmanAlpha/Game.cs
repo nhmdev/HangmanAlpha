@@ -14,8 +14,13 @@ namespace HangmanAlpha
         private string secretWord;
         private string[] maskedWord;
         int score;
+
+        public int Score
+        {
+           get { return score; }
+        }
         
-    
+        
         void GameLost()
         {
             // Visar ett meddelande om förlust
@@ -38,7 +43,7 @@ namespace HangmanAlpha
             Console.WriteLine(winGFX);
             Console.WriteLine("\nGood job " + "!");
             Console.WriteLine("The word is " + secretWord);
-            Score();
+            PlayerScore();
             Console.ReadLine();
 
         }
@@ -174,9 +179,16 @@ namespace HangmanAlpha
             }
 
 		}
-        void Score()
+        void PlayerScore()
         {
             Console.WriteLine("Your score is: " + score);
+        }
+        public void SaveHighScore(Player player, int score)
+        {
+            string playerHighScore =
+                player.PlayerName + Environment.NewLine +
+                score + Environment.NewLine;
+            File.AppendAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\Textfiles\Highscore\Highscore.txt", playerHighScore);
         }
         public void Difficulty()
         {

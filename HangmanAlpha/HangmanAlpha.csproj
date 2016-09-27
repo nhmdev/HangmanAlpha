@@ -40,7 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Textfiles\GFX\HangedmanGFX.txt" />
+    <Content Include="Textfiles\GFX\MenuGFX.txt" />
+    <Content Include="Textfiles\GFX\WelcomeGFX.txt" />
+    <Content Include="Textfiles\GFX\Wellhungman.txt" />
     <Content Include="Textfiles\GFX\WinGFX.txt" />
+    <Content Include="Textfiles\Highscore\Highscore.txt" />
     <Content Include="Textfiles\Playernames.txt" />
     <Content Include="Textfiles\WelcomeGFX.txt" />
     <Content Include="Textfiles\Words\Words.txt" />
