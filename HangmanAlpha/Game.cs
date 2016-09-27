@@ -20,18 +20,13 @@ namespace HangmanAlpha
         {
             // Visar ett meddelande om förlust
             Console.Clear();
-            Console.WriteLine("     ------------- ");
-            Console.WriteLine("     |           | ");
-            Console.WriteLine("     O           | ");
-            Console.WriteLine("    /|\\          | ");
-            Console.WriteLine("    / \\          | ");
-            Console.WriteLine("                 | ");
-            Console.WriteLine("              ------- ");
-            Console.WriteLine("             /       \\ ");
-            Console.WriteLine("            /         \\ ");
+            var hangManFromDisk = File.ReadAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha3\HangmanAlpha\Textfiles\GFX\HangedmanGFX.txt");
+            Console.WriteLine(hangManFromDisk);
             Console.WriteLine("\nYou lost the game.. ");
             Console.WriteLine("The word was " + secretWord);
             Console.WriteLine("You are useless, you are a shame to the human kind " + "!");
+            score = 0;
+            Console.WriteLine("Your score is: " + score);
             Console.ReadLine();
 
         }
@@ -39,15 +34,8 @@ namespace HangmanAlpha
         {
             // Visar ett meddelande om vinst
             Console.Clear();
-            Console.WriteLine("     ------------- ");
-            Console.WriteLine("     |           | ");
-            Console.WriteLine("     |           | ");
-            Console.WriteLine("     O           | ");
-            Console.WriteLine("                 | ");
-            Console.WriteLine("                 | ");
-            Console.WriteLine("  \\ O /       ------- ");
-            Console.WriteLine("    |        /       \\ ");
-            Console.WriteLine("   / \\      /         \\ ");
+            var winGFX = File.ReadAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha3\HangmanAlpha\Textfiles\GFX\WinGFX.txt");
+            Console.WriteLine(winGFX);
             Console.WriteLine("\nGood job " + "!");
             Console.WriteLine("The word is " + secretWord);
             Score();
@@ -188,7 +176,7 @@ namespace HangmanAlpha
 		}
         void Score()
         {
-            Console.WriteLine("Your last score was: " + score);
+            Console.WriteLine("Your score is: " + score);
         }
         public void Difficulty()
         {
