@@ -185,9 +185,7 @@ namespace HangmanAlpha
         }
         public void SaveHighScore(Player player, int score)
         {
-            string playerHighScore =
-                player.PlayerName + Environment.NewLine +
-                score + Environment.NewLine;
+            string playerHighScore = Environment.NewLine + player.PlayerName + " " + score;
             File.AppendAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\Textfiles\Highscore\Highscore.txt", playerHighScore);
         }
         public void Difficulty()
@@ -208,16 +206,19 @@ namespace HangmanAlpha
                 Console.ResetColor();
 
                 string input = Console.ReadLine();
+                while (!((input == "1" ) || (input == "2") || (input == "3")))
+                {
+                    Console.WriteLine("You did not choose a difficulty. Try again");
+
+                    input = Console.ReadLine();
+                }
                 levelChosen = int.Parse(input);
-
-
+                   
                 switch (levelChosen)
                 {
                     case 1: Console.WriteLine("Easy level chosen"); levelChosenLoop = false; break;
                     case 2: Console.WriteLine("Normal level chosen"); levelChosenLoop = false; break;
                     case 3: Console.WriteLine("Hard level chosen"); levelChosenLoop = false; break;
-                        // default: break;
-
                 }
                 
                

@@ -17,19 +17,23 @@ namespace HangmanAlpha
 
 		static void Main(string[] args)
 		{
+         
             Player player1 = new Player();
             Welcome(player1);
             
-
 			while (isTryAgain)                    ///HÄR STARTAR SPEL-LOOPEN
 			{
-				int inputInt = MenuStart();
-                switch (inputInt)
+				string input = MenuStart();
+                switch (input)
                 {
-                    case 1: StartGame(player1); break;
-                    case 2: HowTo(); break;
-                    case 3: Quit(); break;
-                    default: break;
+                    case "1": StartGame(player1); break;
+                    case "2": HowTo(); break;
+                    case "3": HighScore(); break;                   
+                    case "4": Quit(); break;
+                    
+                    default:
+                        Console.WriteLine("Choose 1,2,3 or 4!");
+                        input = Console.ReadLine(); break;
                 }
                 
 			}
@@ -63,7 +67,6 @@ namespace HangmanAlpha
             Console.ResetColor();
             Console.ReadLine();
 
-            
             Console.WriteLine("Enter thy name mortal! ");
             do
             {
@@ -76,30 +79,15 @@ namespace HangmanAlpha
             
             string fileContent = player1.PlayerName + Environment.NewLine;
             
-            //File.WriteAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\Textfiles\Playernames.txt", fileContent);
-            //return player1.PlayerName;
-
-
         }
-		static int MenuStart()
+        static string MenuStart()
 		{
-			// Låter spelaren välja mellan 1 och 2
 			Console.Clear();
             var MenuGFX = File.ReadAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\Textfiles\GFX\MenuGFX.txt");
             Console.WriteLine(MenuGFX);
 
             string input = Console.ReadLine();
-			int inputInt = int.Parse(input);
-			while (inputInt > 3 || inputInt < 1)
-
-			{
-                Console.WriteLine("Choose 1,2 or 3!");
-                input = Console.ReadLine();
-				inputInt = int.Parse(input);
-			}
-            return inputInt;
-
-			//Console.ReadLine();  // ska lägga till en if sats,
+			return input;
 		}
 		static void Quit()
 		{
@@ -124,6 +112,7 @@ namespace HangmanAlpha
 			if (inputTry.ToUpper() == "Y")
 			{
 				isTryAgain = true;
+                Console.WriteLine("Enter your name");
 				Console.Clear();
 			}
 			else
@@ -134,6 +123,9 @@ namespace HangmanAlpha
 
 			// anropa quit eller meny
 		}
+
+
+
 		static void HowTo()
 		{
 			Console.Clear();
@@ -147,7 +139,11 @@ namespace HangmanAlpha
 		}
         static void HighScore()
         {
-
+            Console.Clear();
+            Console.WriteLine("Highscore");
+            var ScoreList = File.ReadAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\Textfiles\Highscore\Highscore.txt");
+            Console.WriteLine(ScoreList);
+            Console.ReadLine();
         }
 
         static void StartGame(Player player1)
