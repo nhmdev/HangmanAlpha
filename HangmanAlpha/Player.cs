@@ -20,6 +20,20 @@ namespace HangmanAlpha
                 playerName = value;
             }
         }
-        
+
+
+        int playerScore;
+
+
+        public int PlayerScore
+        {
+
+            get { return playerScore; }
+            set
+            {
+                playerScore = value;
+            }
+        }
+
     }
 }

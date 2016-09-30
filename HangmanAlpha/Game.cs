@@ -14,6 +14,7 @@ namespace HangmanAlpha
         private string secretWord;
         private string[] maskedWord;
         int score;
+        private int playerScore;
 
         public int Score
         {
@@ -209,14 +210,17 @@ namespace HangmanAlpha
         }
         public void SaveHighScore(Player player, int score)
         {
-            string playerHighScore = Environment.NewLine + player.PlayerName + " " + score;
+            player.PlayerScore = score;
+            //string playerHighScore = Environment.NewLine + player.PlayerName + " " + score;
 
-            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\Highscore\\Highscore.txt" + playerHighScore);
+            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\Highscore\\Highscore.txt");
 
             StringBuilder s = new StringBuilder(strFullPathToMyFile);
 
             s.Replace("file:\\", "");
-            var hangManFromDisk = File.ReadAllText(s.ToString());
+            //var hangManFromDisk = File.ReadAllLines(s.ToString());
+            File.AppendAllText(s.ToString(), player.PlayerName + " " + player.PlayerScore + Environment.NewLine);
+            
         }
         public void Difficulty()
         {
