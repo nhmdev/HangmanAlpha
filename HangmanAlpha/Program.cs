@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
 namespace HangmanAlpha
 {
@@ -17,29 +18,46 @@ namespace HangmanAlpha
 
 		static void Main(string[] args)
 		{
-         
+            //String strAppDir = Path.GetDirectoryName(
+            //   Assembly.GetExecutingAssembly().GetName().CodeBase);
+            //String strFullPathToMyFile = Path.Combine(strAppDir, "\\Text\\MenuGFX.txt");
             Player player1 = new Player();
             Welcome(player1);
             
 			while (isTryAgain)                    ///HÄR STARTAR SPEL-LOOPEN
 			{
-				string input = MenuStart();
-                switch (input)
+                Console.WriteLine("Enter thy name mortal! ");
+                do
                 {
-                    case "1": StartGame(player1); break;
-                    case "2": HowTo(); break;
-                    case "3": HighScore(); break;                   
-                    case "4": Quit(); break;
-                    
-                    default:
-                        Console.WriteLine("Choose 1,2,3 or 4!");
-                        input = Console.ReadLine(); break;
+
+                    player1.PlayerName = Console.ReadLine();
+                    if (player1.PlayerName.Length < 3)
+                        Console.WriteLine("Name must contain atleast 3 letters.");
                 }
-                
+                while (player1.PlayerName.Length < 3);
+
+                string fileContent = player1.PlayerName + Environment.NewLine;
+                bool loop = false;
+                while (!loop)
+                {
+                    string input = MenuStart();
+                    switch (input)
+                    {
+                        case "1": StartGame(player1); loop = true; break;
+                        case "2": HowTo(); break;
+                        case "3": HighScore(); break;
+                        case "4": Quit(); break;
+
+                        default:
+                            Console.WriteLine("Choose 1,2,3 or 4!");
+                            input = Console.ReadLine(); break;
+                    }
+                }
 			}
 			                      //HÄR SLUTAR SPEL-LOOPEN
 											 
 		}
+
 		public static void Welcome(Player player1)
 		{
             {
@@ -67,19 +85,11 @@ namespace HangmanAlpha
             Console.ResetColor();
             Console.ReadLine();
 
-            Console.WriteLine("Enter thy name mortal! ");
-            do
-            {
-                
-                player1.PlayerName = Console.ReadLine();
-                if(player1.PlayerName.Length < 3)
-                    Console.WriteLine("Name must contain atleast 3 letters.");
-            }
-            while (player1.PlayerName.Length < 3);
             
-            string fileContent = player1.PlayerName + Environment.NewLine;
             
         }
+
+       
         static string MenuStart()
 		{
 			Console.Clear();

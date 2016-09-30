@@ -53,3 +53,11 @@ C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\obj\x86\Debug\HangmanAlp
 C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\HangmanAlpha.exe
 C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\HangmanAlpha.pdb
 C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\obj\x86\Debug\HangmanAlpha.csprojResolveAssemblyReference.cache
+C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\GFX\HangedmanGFX.txt
+C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\GFX\MenuGFX.txt
+C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\GFX\WelcomeGFX.txt
+C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\GFX\Wellhungman.txt
+C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\GFX\WinGFX.txt
+C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\Highscore\Highscore.txt
+C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\Playernames.txt
+C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\WelcomeGFX.txt

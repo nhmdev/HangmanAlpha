@@ -9,6 +9,7 @@ namespace HangmanAlpha
     class Player
     {
         string playerName;
+        
 
         public string PlayerName
         {
@@ -19,5 +20,6 @@ namespace HangmanAlpha
                 playerName = value;
             }
         }
+        
     }
 }
