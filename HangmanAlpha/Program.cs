@@ -165,8 +165,13 @@ namespace HangmanAlpha
         {
             Console.Clear();
             Console.WriteLine("Highscore");
-            var ScoreList = File.ReadAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\Textfiles\Highscore\Highscore.txt");
-            Console.WriteLine(ScoreList);
+            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\Highscore\\Highscore.txt");
+
+            StringBuilder s = new StringBuilder(strFullPathToMyFile);
+
+            s.Replace("file:\\", "");
+            var highScore = File.ReadAllText(s.ToString());
+            Console.WriteLine(highScore);
             Console.ReadLine();
         }
 
