@@ -18,9 +18,8 @@ namespace HangmanAlpha
 
 		static void Main(string[] args)
 		{
-            //String strAppDir = Path.GetDirectoryName(
-            //   Assembly.GetExecutingAssembly().GetName().CodeBase);
-            //String strFullPathToMyFile = Path.Combine(strAppDir, "\\Text\\MenuGFX.txt");
+            
+
             Player player1 = new Player();
             Welcome(player1);
             
@@ -62,7 +61,12 @@ namespace HangmanAlpha
 		{
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                var welcomeGFX = File.ReadAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\Textfiles\GFX\WelcomeGFX.txt");
+                String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\GFX\\WelcomeGFX.txt");
+
+                StringBuilder s = new StringBuilder(strFullPathToMyFile);
+
+                s.Replace("file:\\", "");
+                var welcomeGFX = File.ReadAllText(s.ToString());
                 int rowNum = 0;
                 foreach (char writeChar in welcomeGFX) 
                 {
@@ -80,7 +84,12 @@ namespace HangmanAlpha
             
             Console.Clear();
             Console.ForegroundColor =ConsoleColor.White;
-            var wellHungMan = File.ReadAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\Textfiles\GFX\Wellhungman.txt");
+            String strFullPathToMyFile2 = Path.Combine(Files.PathToText + "\\Textfiles\\GFX\\Wellhungman.txt");
+
+            StringBuilder s2 = new StringBuilder(strFullPathToMyFile2);
+
+            s2.Replace("file:\\", "");
+            var wellHungMan = File.ReadAllText(s2.ToString());
             Console.WriteLine(wellHungMan);
             Console.ResetColor();
             Console.ReadLine();
@@ -93,7 +102,12 @@ namespace HangmanAlpha
         static string MenuStart()
 		{
 			Console.Clear();
-            var MenuGFX = File.ReadAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\Textfiles\GFX\MenuGFX.txt");
+            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\GFX\\MenuGFX.txt");
+
+            StringBuilder s = new StringBuilder(strFullPathToMyFile);
+
+            s.Replace("file:\\", "");
+            var MenuGFX = File.ReadAllText(s.ToString());
             Console.WriteLine(MenuGFX);
 
             string input = Console.ReadLine();

@@ -25,7 +25,14 @@ namespace HangmanAlpha
         {
             // Visar ett meddelande om förlust
             Console.Clear();
-            var hangManFromDisk = File.ReadAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha3\HangmanAlpha\Textfiles\GFX\HangedmanGFX.txt");
+            //var hangManFromDisk = File.ReadAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha3\HangmanAlpha\Textfiles\GFX\HangedmanGFX.txt");
+            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\GFX\\HangedmanGFX.txt");
+
+            StringBuilder s = new StringBuilder(strFullPathToMyFile);
+
+            s.Replace("file:\\", "");
+            var hangManFromDisk = File.ReadAllText(s.ToString());
+
             Console.WriteLine(hangManFromDisk);
             Console.WriteLine("\nYou lost the game.. ");
             Console.WriteLine("The word was " + secretWord);
@@ -39,7 +46,12 @@ namespace HangmanAlpha
         {
             // Visar ett meddelande om vinst
             Console.Clear();
-            var winGFX = File.ReadAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha3\HangmanAlpha\Textfiles\GFX\WinGFX.txt");
+            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\GFX\\WinGFX.txt");
+
+            StringBuilder s = new StringBuilder(strFullPathToMyFile);
+
+            s.Replace("file:\\", "");
+            var winGFX = File.ReadAllText(s.ToString());
             Console.WriteLine(winGFX);
             Console.WriteLine("\nGood job " + "!");
             Console.WriteLine("The word is " + secretWord);
