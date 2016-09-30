@@ -165,7 +165,7 @@ namespace HangmanAlpha
         {
             Console.Clear();
             Console.WriteLine("Highscore");
-            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\Highscore\\Highscore.txt");
+            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\Highscore\\ScoreHigh.xml");
 
             StringBuilder s = new StringBuilder(strFullPathToMyFile);
 

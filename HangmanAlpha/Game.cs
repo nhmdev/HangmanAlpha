@@ -213,7 +213,7 @@ namespace HangmanAlpha
             player.PlayerScore = score;
             //string playerHighScore = Environment.NewLine + player.PlayerName + " " + score;
 
-            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\Highscore\\Highscore.txt");
+            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\Highscore\\ScoreHigh.xml");
 
             StringBuilder s = new StringBuilder(strFullPathToMyFile);
 
@@ -222,6 +222,7 @@ namespace HangmanAlpha
             File.AppendAllText(s.ToString(), player.PlayerName + " " + player.PlayerScore + Environment.NewLine);
             
         }
+
         public void Difficulty()
         {
             bool levelChosenLoop = true;

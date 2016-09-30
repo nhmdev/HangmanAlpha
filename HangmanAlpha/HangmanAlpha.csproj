@@ -57,6 +57,7 @@
     <Content Include="Textfiles\Highscore\Highscore.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Textfiles\Highscore\ScoreHigh.xml" />
     <Content Include="Textfiles\Playernames.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
