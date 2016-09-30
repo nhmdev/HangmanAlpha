@@ -23,9 +23,9 @@ namespace HangmanAlpha
         
         void GameLost()
         {
-            // Visar ett meddelande om förlust
+            
             Console.Clear();
-            //var hangManFromDisk = File.ReadAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha3\HangmanAlpha\Textfiles\GFX\HangedmanGFX.txt");
+            
             String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\GFX\\HangedmanGFX.txt");
 
             StringBuilder s = new StringBuilder(strFullPathToMyFile);
@@ -61,7 +61,14 @@ namespace HangmanAlpha
         }
         string[] GetPlayerNameFromFile()
         {
-          return  File.ReadAllLines(@"C:\Users\Anders\Source\Repos\HangmanAlpha3\HangmanAlpha\Textfiles\Playernames.txt");
+            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\Words\\Playernames.txt");
+
+            StringBuilder s = new StringBuilder(strFullPathToMyFile);
+
+            s.Replace("file:\\", "");
+            var playerNameDisk = File.ReadAllText(s.ToString());
+            return  File.ReadAllLines(playerNameDisk);
+
         }
 
         bool LetterController(string guessedLetter, string secretWord)
@@ -203,7 +210,13 @@ namespace HangmanAlpha
         public void SaveHighScore(Player player, int score)
         {
             string playerHighScore = Environment.NewLine + player.PlayerName + " " + score;
-            File.AppendAllText(@"C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\Textfiles\Highscore\Highscore.txt", playerHighScore);
+
+            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\Highscore\\Highscore.txt" + playerHighScore);
+
+            StringBuilder s = new StringBuilder(strFullPathToMyFile);
+
+            s.Replace("file:\\", "");
+            var hangManFromDisk = File.ReadAllText(s.ToString());
         }
         public void Difficulty()
         {

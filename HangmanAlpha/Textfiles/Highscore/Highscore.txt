@@ -12,3 +12,6 @@ alex 20
 alex 70
 Robin 290
 Robin 300
+Robin 20
+Alejandro 290
+Robin 230
