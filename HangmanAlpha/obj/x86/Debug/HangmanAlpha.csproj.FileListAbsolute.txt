@@ -61,3 +61,4 @@ C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\GFX\
 C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\Highscore\Highscore.txt
 C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\Playernames.txt
 C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\WelcomeGFX.txt
+C:\Users\Anders\Source\Repos\HangmanAlpha4\HangmanAlpha\bin\Debug\Textfiles\Words\Words.txt

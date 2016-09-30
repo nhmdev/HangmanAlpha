@@ -164,8 +164,13 @@ namespace HangmanAlpha
 		{
             // ska slumpa ett ord från en ordbank, 
             //utvecklas senare med array när vi har fler ord
-            var words = File.ReadAllLines(@"C:\Users\Anders\Source\Repos\HangmanAlpha3\HangmanAlpha\Textfiles\Words\Words.txt");
+            //var words = File.ReadAllLines(@"C:\Users\Anders\Source\Repos\HangmanAlpha3\HangmanAlpha\Textfiles\Words\Words.txt");
+            String strFullPathToMyFile = Path.Combine(Files.PathToText + "\\Textfiles\\Words\\Words.txt");
 
+            StringBuilder s = new StringBuilder(strFullPathToMyFile);
+
+            s.Replace("file:\\", "");
+            var words = File.ReadAllLines(s.ToString());
 
 
             switch (levelChosen)

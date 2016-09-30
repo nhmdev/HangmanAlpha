@@ -64,7 +64,9 @@
     <Content Include="Textfiles\WelcomeGFX.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Textfiles\Words\Words.txt" />
+    <Content Include="Textfiles\Words\Words.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
